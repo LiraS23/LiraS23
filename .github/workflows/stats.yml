@@ -1,16 +1,20 @@
+# .github/workflows/stats.yml
 name: Update GitHub Stats
 on:
   schedule:
     - cron: '0 0 * * *'  # Atualiza diariamente à meia-noite
-  workflow_dispatch:     # Permite execução manual
+  workflow_dispatch:      # Permite execução manual
 jobs:
   update-stats:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # Importante para evitar conflitos
+          fetch-depth: 0
 
-      - name: Generate Stats Card
+      - name: Generate Stats
         uses: anuraghazra/github-readme-stats@main
         with:
           github_token: ${{ secrets.GH_TOKEN }}
@@ -19,16 +23,13 @@ jobs:
           include_all_commits: true
           count_private: true
           show_icons: true
-          hide_title: false
-          line_height: 25
-          hide_rank: false
-          custom_title: "Minhas Estatísticas do GitHub"
-          output_file: github-stats.svg  # Nome do arquivo gerado
+          hide_title: true
+          output_file: github-stats.svg  # Nome do arquivo de saída
 
-      - name: Commit Changes
+      - name: Commit and Push
         run: |
-          git config --global user.name "Seu Nome"
-          git config --global user.email "seu-email@example.com"
+          git config --global user.name "LiraS23"
+          git config --global user.email "seu-email@provedor.com"  # Substitua pelo seu e-mail
           git add github-stats.svg
           git commit -m "Update GitHub Stats"
           git push
