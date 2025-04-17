@@ -19,7 +19,7 @@ jobs:
           node-version: 20  # Versão necessária para a ação
 
       - name: Generate Stats
-        uses: anuraghazra/github-readme-stats@v2  # Versão estável
+        uses: anuraghazra/github-readme-stats@main
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           username: LiraS23
