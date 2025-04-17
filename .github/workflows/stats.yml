@@ -1,7 +1,7 @@
 name: Update GitHub Stats
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # Atualiza diariamente
   workflow_dispatch:
 jobs:
   update-stats:
@@ -13,8 +13,13 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # Versão necessária para a ação
+
       - name: Generate Stats
-        uses: anuraghazra/github-readme-stats@master  # Corrigido para "master"
+        uses: anuraghazra/github-readme-stats@v2  # Versão estável
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           username: LiraS23
