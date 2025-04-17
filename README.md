@@ -32,7 +32,7 @@
 
 ## 🚀 Projetos Backend
 
-### [Portal do Candidato](https://github.com/LiraS23/PRIV-2024_2_Serratec_Portal_do_Candidato)
+### [Portal do Candidato](https://github.com/RTIC-STEM/2024_2_Serratec_Portal_do_Candidato)
 📌 Sistema de gerenciamento de candidaturas com autenticação JWT  
 🔧 Stack: Java 17, Spring Boot 3, PostgreSQL, Docker
 
