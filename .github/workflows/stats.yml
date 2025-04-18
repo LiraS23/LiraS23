@@ -33,7 +33,7 @@ jobs:
       - name: Commit and Push
         run: |
           git config --global user.name "LiraS23"
-          git config --global user.email "seu-email@exemplo.com"  # Substitua pelo seu e-mail!
+          git config --global user.email "daniel.lira.s23@gmail.com"  # Substitua pelo seu e-mail!
           git pull origin main
           git add github-stats.svg
           git commit -m "Update GitHub Stats"
