@@ -32,7 +32,8 @@
 
 ## 🚀 Projetos Backend
 
-### [Portal do Candidato](https://github.com/LiraS23/PRIV-2024_2_Serratec_Portal_do_Candidato)
+### [Portal do Candidato - Front](https://portalserratec.netlify.app/)
+### [Portal do Candidato - Back](https://portal-candidato-api.onrender.com/swagger-ui/index.html#/)
 📌 Sistema de gerenciamento de candidaturas com autenticação JWT  
 🔧 Stack: Java 17, Spring Boot 3, PostgreSQL, Docker
 
